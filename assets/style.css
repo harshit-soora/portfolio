@@ -1,24 +1,13 @@
-/* =========================================================
-   HARSHIT SOORA — portfolio
-   Built to match robbowen.digital's actual design language:
-   - Pale cool off-white background
-   - Bold heavy sans for display, light Fraunces for "Hi, my name is"
-   - Purple/violet primary, cyan/teal accent
-   - Striped purple buttons
-   - Horizontal project rows (illustration left, text right)
-   - Cyan dot for sentence-ending periods on titles
-   ========================================================= */
-
 :root {
   /* Palette */
-  --bg:        #eaf2f6;          /* very pale cool off-white */
+  --bg:        #eaf2f6;
   --bg-soft:   #d8e6ee;
-  --ink:       #1a2348;          /* deep navy */
+  --ink:       #1a2348;
   --ink-soft:  #4a5478;
   --paper:     #ffffff;
-  --accent:    #6e2bd9;          /* violet primary */
+  --accent:    #6e2bd9;
   --accent-2:  #8a4ef0;
-  --teal:      #6dc8d4;           /* cyan/teal accent */
+  --teal:      #6dc8d4;
   --teal-soft: #a8dde4;
   --rule:      rgba(26, 35, 72, 0.14);
 
@@ -74,7 +63,6 @@ a   { color: inherit; text-decoration: none; }
 }
 .skip-link:focus { top: 1rem; }
 
-/* Cyan period at the end of headlines — like a quiet accent */
 .dot { color: var(--teal); font-weight: inherit; }
 
 /* ============== HEADER ============== */
@@ -119,7 +107,7 @@ a   { color: inherit; text-decoration: none; }
 }
 .site-nav ul {
   display: flex;
-  gap: clamp(1.25rem, 3vw, 2.75rem);
+  gap: clamp(1rem, 2.4vw, 2.25rem);
   list-style: none;
   margin: 0; padding: 0;
 }
@@ -164,7 +152,7 @@ a   { color: inherit; text-decoration: none; }
 }
 .hire-btn:hover .hire-bubble { transform: rotate(-8deg) scale(1.05); }
 
-/* ============== EDGE MARKERS ============== */
+/* ============== EDGE MARKERS (left rail) ============== */
 .edge-markers {
   position: fixed;
   top: 0; bottom: 0; left: 0;
@@ -174,7 +162,7 @@ a   { color: inherit; text-decoration: none; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   padding-bottom: 1.5rem;
   gap: 1rem;
 }
@@ -195,7 +183,7 @@ a   { color: inherit; text-decoration: none; }
   opacity: 0.4;
 }
 
-/* ============== STRIPED BUTTON (signature element) ============== */
+/* ============== STRIPED BUTTON ============== */
 .btn-striped {
   display: inline-flex;
   align-items: center;
@@ -236,7 +224,7 @@ a   { color: inherit; text-decoration: none; }
 /* ============== HERO ============== */
 .hero {
   min-height: 100vh;
-  padding: 7rem 0 4rem;
+  padding: 7rem 0 3rem;
   padding-left: var(--edge-pad);
   padding-right: clamp(1.25rem, 3vw, 3rem);
   display: flex;
@@ -252,7 +240,7 @@ a   { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
-  align-items: center;
+  align-items: start;
   padding-left: clamp(1rem, 2vw, 2rem);
   position: relative;
 }
@@ -263,13 +251,13 @@ a   { color: inherit; text-decoration: none; }
   }
 }
 
-/* The diagonal stripe panel that sits behind the headline + portrait */
+/* ----- Diagonal stripe band ----- */
 .hero-stripes {
   position: absolute;
-  left: -2%;
-  right: -4%;
-  top: 38%;
-  height: 38%;
+  left: 0;
+  right: 40%;
+  top: 45%;
+  height: 50%;
   background-image: repeating-linear-gradient(
     -45deg,
     var(--teal-soft) 0 2px,
@@ -277,9 +265,14 @@ a   { color: inherit; text-decoration: none; }
   );
   z-index: 0;
   pointer-events: none;
+  -webkit-mask-image: linear-gradient(to right, #000 78%, transparent 100%);
+          mask-image: linear-gradient(to right, #000 78%, transparent 100%);
 }
 @media (max-width: 900px) {
-  .hero-stripes { display: none; }
+  .hero-stripes {
+    top: 42%;
+    height: 38%;
+  }
 }
 
 .hero-text {
@@ -303,42 +296,31 @@ a   { color: inherit; text-decoration: none; }
   letter-spacing: -0.02em;
 }
 .word-start { font-weight: 200; }
-.hero-title .line--prelude .word { font-weight: 300; }
-.hero-title .line--prelude .emphasised {
+
+.hero-title .name-row {
+  display: inline-flex;
+  align-items: flex-end;   /* baseline-ish alignment with the square */
+  gap: 0.45em;
+  margin-top: 0.2em;
+}
+.hero-title .emphasised {
   font-family: var(--display);
   font-weight: 800;
   font-style: normal;
   letter-spacing: -0.025em;
-}
-.hero-title .word {
   display: inline-block;
-  margin-right: 0.18em;
 }
-.hero-title .word--punct {
-  margin-left: -0.1em;
-  margin-right: 0;
-  color: var(--teal);
-}
-
-.hero-sub {
-  position: relative;
-  z-index: 2;
-  margin: 1.8rem 0 0;
-  max-width: 38ch;
-  font-size: var(--t-lede);
-  color: var(--ink);
-  line-height: 1.55;
-}
-.hero-sub strong { font-weight: 700; }
 
 /* Portrait slot on the right */
 .hero-portrait {
   position: relative;
   z-index: 2;
   aspect-ratio: 4 / 5;
-  max-width: 460px;
+  max-width: 450px;
   width: 100%;
   margin-left: auto;
+  margin-top: -2rem;
+  align-self: start;
 }
 .portrait-frame {
   position: absolute;
@@ -353,24 +335,54 @@ a   { color: inherit; text-decoration: none; }
   object-fit: cover;
 }
 
-/* SCROLL marker in the gap */
-.scroll-prompt {
-  position: absolute;
-  left: calc(var(--edge-pad) + 36%);
-  bottom: 3rem;
+/* ----- Hero foot row -----
+   Below the name+portrait grid:
+     [ dot + SCROLL stack ]   [ I'm a software engineer... ]
+*/
+.hero-foot {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: end;
+  gap: clamp(2rem, 4vw, 4rem);
+  margin-top: clamp(2rem, 5vh, 4rem);
+  padding-left: clamp(1rem, 2vw, 2rem);
+  max-width: var(--maxw);
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.hero-foot-marker {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: .75rem;
+  gap: 0.85rem;
+}
+
+.foot-dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+
+.foot-scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
   font-family: var(--display);
-  font-size: .72rem;
+  font-size: 0.72rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
   color: var(--ink-soft);
 }
-.scroll-letters { display: flex; flex-direction: column; font-weight: 500; }
-.scroll-letters span { display: block; line-height: 1.3; }
-.scroll-line {
+.foot-scroll-letters { display: flex; flex-direction: column; font-weight: 500; }
+.foot-scroll-letters span { display: block; line-height: 1.3; }
+.foot-scroll-line {
   display: block;
   width: 1px; height: 56px;
   background: var(--ink-soft);
@@ -378,7 +390,7 @@ a   { color: inherit; text-decoration: none; }
   position: relative;
   overflow: hidden;
 }
-.scroll-line::after {
+.foot-scroll-line::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -390,6 +402,17 @@ a   { color: inherit; text-decoration: none; }
   60%  { transform: translateY(100%); }
   100% { transform: translateY(100%); }
 }
+
+.hero-sub {
+  margin: 0;
+  max-width: 42ch;
+  font-size: var(--t-lede);
+  color: var(--ink);
+  line-height: 1.55;
+  align-self: start;
+  padding-bottom: 0.5rem;
+}
+.hero-sub strong { font-weight: 700; }
 
 /* ============== SECTION TITLES ============== */
 .section-title {
@@ -403,7 +426,6 @@ a   { color: inherit; text-decoration: none; }
 }
 .section-title.small { font-size: var(--t-h2sm); }
 
-/* The short cyan rule that sits below the section title */
 .title-rule {
   display: block;
   width: 80px;
@@ -554,7 +576,7 @@ a   { color: inherit; text-decoration: none; }
   letter-spacing: 0.05em;
 }
 
-/* ============== OPEN SOURCE ============== */
+/* ============== OPEN SOURCE / PROJECTS ============== */
 .open-source { padding: clamp(6rem, 14vh, 12rem) 0; }
 
 .projects {
@@ -609,6 +631,76 @@ a   { color: inherit; text-decoration: none; }
 }
 .project-desc strong { font-weight: 700; }
 .project-desc:last-of-type { margin-bottom: 0; }
+
+/* ============== PUBLICATIONS ============== */
+.publications { padding: clamp(4rem, 10vh, 8rem) 0; }
+
+.pub-list {
+  list-style: none;
+  margin: 3rem 0 0; padding: 0;
+}
+.pub-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--rule);
+}
+.pub-item:last-child { border-bottom: 1px solid var(--rule); }
+
+@media (min-width: 760px) {
+  .pub-item {
+    grid-template-columns: 240px 1fr;
+    gap: 3rem;
+  }
+}
+
+.pub-meta { display: flex; flex-direction: column; gap: .35rem; }
+.pub-num {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+.pub-venue {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--ink);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.pub-date {
+  font-family: var(--display);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.pub-body .pub-title {
+  margin: 0 0 .55rem;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.pub-authors {
+  margin: 0 0 1rem;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+.pub-desc {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.65;
+  max-width: 62ch;
+}
 
 /* ============== COURSES ============== */
 .courses { padding: clamp(4rem, 10vh, 8rem) 0; }
@@ -678,7 +770,6 @@ a   { color: inherit; text-decoration: none; }
 }
 .course-list li:hover .course-num { color: var(--accent); }
 
-/* ----- Class projects sub-section ----- */
 .class-projects {
   margin-top: 6rem;
   padding-top: 4rem;
@@ -791,35 +882,50 @@ a   { color: inherit; text-decoration: none; }
 /* ============== ANIMATION SETUP ============== */
 .js-loading .hero-title .word,
 .js-loading .hero-portrait,
-.js-loading .hero-stripes {
+.js-loading .hero-stripes,
+.js-loading .name-square {
   opacity: 0;
 }
 .js-loading .hero-title .word { transform: translateY(40px); }
 .js-loading .hero-portrait { transform: translateX(40px); }
 .js-loading .hero-sub,
-.js-loading .scroll-prompt {
+.js-loading .hero-foot-marker {
   opacity: 0;
 }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
     transition-duration: 0.001ms !important;
   }
-  .scroll-line::after { display: none; }
+  .foot-scroll-line::after { display: none; }
 }
 
 /* ============== MOBILE TWEAKS ============== */
 @media (max-width: 760px) {
   :root { --edge-pad: 30px; }
-  .scroll-prompt { display: none; }
   .edge-copyright { font-size: 0.62rem; letter-spacing: 0.1em; }
   .hero { padding-top: 6rem; }
-  .hero-portrait { max-width: 280px; margin: 0 auto; }
+  .hero-portrait {
+    max-width: 280px;
+    margin: 0 auto;
+    margin-top: 0;
+  }
   .hire-btn span { display: none; }
-  .site-nav a { font-size: 0.75rem; letter-spacing: 0.12em; }
-  .site-nav ul { gap: 1rem; }
+  .site-nav a { font-size: 0.72rem; letter-spacing: 0.1em; }
+  .site-nav ul { gap: 0.85rem; }
   .footer-social { gap: 1rem; }
   .footer-inner { flex-direction: column; align-items: flex-start; }
+
+  /* Stack the foot row vertically on small screens */
+  .hero-foot {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .hero-foot-marker {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .foot-scroll-line { height: 1px; width: 56px; }
 }

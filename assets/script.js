@@ -1,7 +1,3 @@
-/* =========================================================
-   HARSHIT SOORA — interactions
-   ========================================================= */
-
 (function () {
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -113,7 +109,6 @@
       '.course-school',
       '.class-projects-title',
       '.class-project',
-      '.site-footer',
     ];
 
     revealTargets.forEach(sel => {
