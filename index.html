@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#eaf2f6" />
+  <title>Harshit Soora — Software Engineer</title>
+  <meta name="description" content="Harshit Soora is a software engineer based in Maryland, building scalable cloud, AI and HPC systems." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Harshit Soora — Software Engineer" />
+  <meta property="og:description" content="Software engineer building scalable cloud, AI and HPC systems." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Manrope (heavy weights) for the bold display type, Fraunces for the serif prelude, Inter for body -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/style.css" />
+  <script>
+    /* Hide hero parts before paint so GSAP can stagger them in.
+       Safety net: 1.5s after load, if GSAP never fired, show everything. */
+    document.documentElement.classList.add('js-loading');
+    setTimeout(() => {
+      if (!window.__heroAnimated) {
+        document.documentElement.classList.remove('js-loading');
+      }
+    }, 1500);
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header">
+    <a href="#home" class="logo" aria-label="Harshit Soora — back to top">
+      <svg class="logo-mark" viewBox="0 0 60 40" fill="none" aria-hidden="true">
+        <path d="M2 36 L18 6 L34 36 Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" fill="rgba(110,43,217,0.08)"/>
+        <path d="M26 36 L42 14 L58 36 Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" fill="rgba(110,43,217,0.08)"/>
+      </svg>
+      <span class="logo-divider" aria-hidden="true"></span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#courses">Courses</a></li>
+      </ul>
+    </nav>
+
+    <a class="hire-btn" href="mailto:hsoora@umd.edu?subject=Hi%20Harshit%2C%20I%27d%20like%20to%20work%20with%20you">
+      <svg class="hire-bubble" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M16 4 C8 4 3 9 3 15 C3 19 5 22 9 24 L8 30 L14 25.5 C14.5 25.6 15.3 25.6 16 25.6 C24 25.6 29 21 29 15 C29 9 24 4 16 4 Z"
+              fill="none" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      <span>Hire me</span>
+    </a>
+  </header>
+
+  <!-- Vertical edge marker (left side) -->
+  <aside class="edge-markers" aria-hidden="true">
+    <span class="edge-copyright">© Harshit Soora, Seattle, US.</span>
+    <span class="edge-rule"></span>
+  </aside>
+
+  <main id="main-content">
+
+    <!-- ============== HERO ============== -->
+    <section class="hero" id="home">
+      <div class="hero-grid">
+        <!-- Stripe panel as a backdrop layer that overlaps text and portrait -->
+        <div class="hero-stripes" aria-hidden="true"></div>
+
+        <div class="hero-text">
+          <h1 class="hero-title">
+            <span class="line line--prelude">
+              <span class="word-start">Hi,</span> <span class="word-start">my</span>
+            </span>
+            <span class="line line--prelude">
+              <span class="word-start">name</span> <span class="word-start">is</span>
+              <span class="word emphasised">Harshit Soora</span><span class="word word--punct">.</span>
+            </span>
+          </h1>
+
+          <p class="hero-sub">
+            I'm a <strong>software engineer</strong> from College Park, Maryland — building scalable cloud, AI and HPC systems.
+          </p>
+        </div>
+
+        <!-- Portrait slot on the right -->
+        <div class="hero-portrait" aria-hidden="true">
+          <div class="portrait-frame">
+            <img src="assets/img/portrait.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-prompt" aria-hidden="true">
+        <span class="scroll-letters">
+          <span>S</span><span>c</span><span>r</span><span>o</span><span>l</span><span>l</span>
+        </span>
+        <span class="scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- ============== TOGETHER ============== -->
+    <section class="together" id="work">
+      <div class="container">
+        <h2 class="section-title">
+          Let's work together<span class="dot">.</span>
+        </h2>
+        <span class="title-rule" aria-hidden="true"></span>
+
+        <p class="together-body">
+          From <strong>cloud-native infrastructure</strong> and <strong>AI inference platforms</strong> to <strong>HPC workflow tooling</strong> and <strong>full-stack web applications</strong>. I help ambitious teams ship reliable systems at scale — <strong>the more interesting the constraints, the better</strong>.
+        </p>
+
+        <a class="btn-striped" href="#approach">
+          <span>About my approach</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============== EXPERIENCE ============== -->
+    <section class="experience" id="approach">
+      <div class="container">
+        <p class="eyebrow">Experience</p>
+        <h2 class="section-title small">
+          A few places I've shipped work<span class="dot">.</span>
+        </h2>
+        <span class="title-rule" aria-hidden="true"></span>
+
+        <ol class="exp-list">
+          <li class="exp-item exp-item--upcoming">
+            <div class="exp-meta">
+              <span class="exp-company">Google</span>
+              <span class="exp-date">Upcoming · Joining soon</span>
+              <span class="exp-badge">Next</span>
+            </div>
+            <div class="exp-body">
+              <h3>Software Engineer</h3>
+              <p>
+                Joining Google as a Software Engineer following my graduate studies at UMD. More to come.
+              </p>
+            </div>
+          </li>
+
+          <li class="exp-item">
+            <div class="exp-meta">
+              <span class="exp-company">Open OnDemand</span>
+              <span class="exp-date">Oct 2024 — Present</span>
+              <span class="exp-tag-meta">Graduate Research Assistant</span>
+            </div>
+            <div class="exp-body">
+              <h3>Software Developer · Graduate Research Assistant</h3>
+              <p>
+                Architecting a <strong>Workflow Manager</strong> for Open OnDemand (700+ HPC sites), letting researchers visually design DAG-based computational pipelines with conditional branching and real-time job reporting. Leading development under <strong>NSF grant #2411376</strong> with the Ohio Supercomputer Center and Texas A&amp;M.
+              </p>
+              <ul class="exp-tags">
+                <li>Ruby</li><li>HPC</li><li>Apptainer</li><li>Slurm</li><li>DAGMan</li><li>Airflow</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="exp-item">
+            <div class="exp-meta">
+              <span class="exp-company">Inovalon</span>
+              <span class="exp-date">Jun 2025 — Aug 2025</span>
+              <span class="exp-tag-meta">Internship · Bowie, MD</span>
+            </div>
+            <div class="exp-body">
+              <h3>Software Developer Intern</h3>
+              <p>
+                Built an <strong>AI-powered SOAP notes platform</strong> for healthcare clients — NLP-based auto-suggestions and real-time duplicate detection cut development time ~40%. Architected an automated approval workflow on Azure with email orchestration and role-based routing, with 95% code coverage end-to-end and savings of ~$100K in manual processing.
+              </p>
+              <ul class="exp-tags">
+                <li>C#</li><li>ASP.NET</li><li>Azure</li><li>SQL</li><li>JavaScript</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="exp-item">
+            <div class="exp-meta">
+              <span class="exp-company">NVIDIA</span>
+              <span class="exp-date">Jul 2021 — Aug 2024</span>
+              <span class="exp-tag-meta">Full-time · Pune, India</span>
+            </div>
+            <div class="exp-body">
+              <h3>Software Engineer II — Cloud &amp; AI</h3>
+              <p>
+                Architected <strong>AI inference infrastructure</strong> for Maxine Audio NIMs on Triton Inference Server &amp; NVCF. Designed a bidirectional streaming SDK in C++ that cut model serving latency ~40% and enabled real-time audio. Co-invented an AI-powered audio editor with prosody preservation hitting <strong>~20ms latency</strong>. Engineered GeForce NOW cross-platform stacks across Android, iOS, macOS and Linux, improving streaming QoS ~30%. Built observability with Kafka, Prometheus and Kibana, enabling 50–60% faster debug.
+              </p>
+              <ul class="exp-tags">
+                <li>Go</li><li>C++</li><li>Python</li><li>Java</li><li>Kafka</li><li>Prometheus</li><li>RTP</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============== OPEN SOURCE ============== -->
+    <section class="open-source">
+      <div class="container">
+        <h2 class="section-title">
+          Open Source<span class="dot">.</span>
+        </h2>
+        <span class="title-rule" aria-hidden="true"></span>
+
+        <p class="section-lede">
+          Side projects, research and experiments I've put out into the world. A few favourites below.
+        </p>
+
+        <div class="projects">
+          <article class="project">
+            <div class="project-illo" aria-hidden="true">
+              <!-- abstract geometric icon for benchmarking -->
+              <svg viewBox="0 0 200 200" fill="none">
+                <rect x="30" y="120" width="30" height="50" stroke="currentColor" stroke-width="3" fill="rgba(110,43,217,0.08)"/>
+                <rect x="70" y="80" width="30" height="90" stroke="currentColor" stroke-width="3" fill="rgba(110,43,217,0.08)"/>
+                <rect x="110" y="50" width="30" height="120" stroke="currentColor" stroke-width="3" fill="rgba(110,43,217,0.08)"/>
+                <rect x="150" y="30" width="30" height="140" stroke="currentColor" stroke-width="3" fill="rgba(110,43,217,0.08)"/>
+                <circle cx="45" cy="120" r="6" fill="currentColor"/>
+                <circle cx="85" cy="80" r="6" fill="currentColor"/>
+                <circle cx="125" cy="50" r="6" fill="currentColor"/>
+                <circle cx="165" cy="30" r="6" fill="currentColor"/>
+                <path d="M45 120 L85 80 L125 50 L165 30" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+              </svg>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">UniBench<span class="dot">.</span></h3>
+              <p class="project-desc">
+                A universal evaluation framework for software engineering agents on issue resolution and test generation tasks. Proposes <strong>4 novel metrics</strong> — null-resolution, edit-resilience, error-resolution@x and line-level fault localization — to measure fine-grained code reasoning beyond pass@k.
+              </p>
+              <p class="project-desc">
+                The pipeline runs CodeActAgent over <strong>2,294 GitHub issue–PR pairs</strong>, comparing 15+ benchmarks (SWE-Bench, HumanEval, BigCodeBench, MBPP).
+              </p>
+              <a class="btn-striped" href="https://github.com/harshit-soora/code-act" target="_blank" rel="noopener">
+                <span>Get UniBench</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-illo" aria-hidden="true">
+              <!-- icon for Vulineage: layered hierarchy / shield -->
+              <svg viewBox="0 0 200 200" fill="none">
+                <path d="M100 20 L160 50 L160 110 C160 140 130 165 100 180 C70 165 40 140 40 110 L40 50 Z"
+                      stroke="currentColor" stroke-width="3" fill="rgba(110,43,217,0.08)"/>
+                <path d="M70 80 L100 65 L130 80 L130 115 L100 130 L70 115 Z" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                <circle cx="100" cy="100" r="8" fill="currentColor"/>
+                <line x1="100" y1="60" x2="100" y2="92" stroke="currentColor" stroke-width="2"/>
+                <line x1="68" y1="80" x2="92" y2="100" stroke="currentColor" stroke-width="2"/>
+                <line x1="132" y1="80" x2="108" y2="100" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Vulineage<span class="dot">.</span></h3>
+              <p class="project-desc">
+                A web tool that reconstructs Docker image tag hierarchies and overlays vulnerability timelines, helping teams pick safer base images <strong>3–4× faster</strong> than existing tools.
+              </p>
+              <p class="project-desc">
+                Built with interactive D3.js dashboards (icicle plots, force-directed graphs, time-series) on a Python backend hosted on AWS.
+              </p>
+              <a class="btn-striped" href="https://tool.vulineage.com/" target="_blank" rel="noopener">
+                <span>Open Vulineage</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-illo" aria-hidden="true">
+              <!-- icon for Carla: car/road -->
+              <svg viewBox="0 0 200 200" fill="none">
+                <path d="M30 130 L170 130" stroke="currentColor" stroke-width="2.5" stroke-dasharray="8 8"/>
+                <rect x="60" y="80" width="80" height="40" rx="6" stroke="currentColor" stroke-width="3" fill="rgba(110,43,217,0.08)"/>
+                <rect x="68" y="86" width="28" height="20" rx="3" stroke="currentColor" stroke-width="2" fill="none"/>
+                <rect x="104" y="86" width="28" height="20" rx="3" stroke="currentColor" stroke-width="2" fill="none"/>
+                <circle cx="78" cy="130" r="10" stroke="currentColor" stroke-width="3" fill="rgba(110,43,217,0.08)"/>
+                <circle cx="122" cy="130" r="10" stroke="currentColor" stroke-width="3" fill="rgba(110,43,217,0.08)"/>
+                <path d="M150 60 L170 60 L170 80" stroke="currentColor" stroke-width="2"/>
+                <path d="M50 60 L30 60 L30 80" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Carla-DDPG<span class="dot">.</span></h3>
+              <p class="project-desc">
+                Bachelor's thesis on safe strategies for autonomous driving. Hierarchical program-controlled RL with maneuver-specific DDPG agents (lane-swap, obstacle avoidance) — <strong>58.2% sample-efficiency improvement</strong> over flat DRL.
+              </p>
+              <p class="project-desc">
+                Validated on 10 NHTSA pre-crash scenarios in CARLA with 5 LTL safety specifications across 18,477 clauses.
+              </p>
+              <a class="btn-striped" href="https://github.com/harshit-soora/Carla-DDPG" target="_blank" rel="noopener">
+                <span>Get Carla-DDPG</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== COURSES ============== -->
+    <section class="courses" id="courses">
+      <div class="container">
+        <p class="eyebrow">Coursework &amp; Projects</p>
+        <h2 class="section-title">
+          What I've studied<span class="dot">.</span>
+        </h2>
+        <span class="title-rule" aria-hidden="true"></span>
+
+        <p class="section-lede">
+          Graduate and undergraduate coursework that's shaped how I build things — across AI, systems, and theory — alongside the class projects that came out of them.
+        </p>
+
+        <!-- Schools -->
+        <div class="courses-stack">
+          <div class="course-school">
+            <div class="course-school-meta">
+              <h3>University of Maryland, College Park</h3>
+              <p>M.S. in Computer Science · GPA 3.94 / 4.0 · Aug 2024 — May 2026</p>
+            </div>
+            <ul class="course-list">
+              <li><span class="course-num">01</span> Natural Language Processing</li>
+              <li><span class="course-num">02</span> Reinforcement Learning for Robotics</li>
+              <li><span class="course-num">03</span> Generative AI Agents (Agentic AI)</li>
+              <li><span class="course-num">04</span> Information Visualization</li>
+              <li><span class="course-num">05</span> Parallel Computing</li>
+              <li><span class="course-num">06</span> Computer Vision</li>
+            </ul>
+          </div>
+
+          <div class="course-school">
+            <div class="course-school-meta">
+              <h3>IIT Kharagpur</h3>
+              <p>B.Tech (Hons.) Computer Science &amp; Engineering · CGPA 8.37 / 10 · Jul 2017 — May 2021</p>
+            </div>
+            <ul class="course-list">
+              <li><span class="course-num">07</span> Algorithms</li>
+              <li><span class="course-num">08</span> Software Engineering</li>
+              <li><span class="course-num">09</span> Computer Networks</li>
+              <li><span class="course-num">10</span> Database Management Systems</li>
+              <li><span class="course-num">11</span> Operating System</li>
+              <li><span class="course-num">12</span> Object Oriented System Design</li>
+              <li><span class="course-num">13</span> Distributed Systems &amp; Cloud Computing</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Class projects -->
+        <div class="class-projects">
+          <p class="eyebrow eyebrow--soft">Class projects</p>
+          <h3 class="class-projects-title">
+            Built along the way<span class="dot">.</span>
+          </h3>
+
+          <ul class="class-project-list">
+            <li class="class-project">
+              <div class="cp-meta">
+                <span class="cp-num">01</span>
+                <span class="cp-school">University of Maryland</span>
+                <span class="cp-date">Jan 2025 — May 2025</span>
+              </div>
+              <div class="cp-body">
+                <h4>Vulineage — Docker Image Security Visualizer</h4>
+                <p>
+                  Web-based security visualization that reconstructs Docker image tag hierarchies and overlays vulnerability timelines. Built interactive D3.js dashboards (icicle plots, force-directed graphs, time-series) on a Python backend hosted on AWS, enabling real-time querying of Docker tag lineage and CVE distributions.
+                </p>
+                <ul class="exp-tags">
+                  <li>JavaScript</li><li>D3.js</li><li>AWS</li><li>Python</li><li>Information Viz</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="class-project">
+              <div class="cp-meta">
+                <span class="cp-num">02</span>
+                <span class="cp-school">IIT Kharagpur · Bachelor's Thesis</span>
+                <span class="cp-date">Jan 2020 — May 2021</span>
+              </div>
+              <div class="cp-body">
+                <h4>Safe Strategies for Autonomous Driving (Carla-DDPG)</h4>
+                <p>
+                  Hierarchical Program Controlled RL with maneuver-specific DDPG agents (lane-swap, obstacle avoidance), achieving <strong>58.2% sample-efficiency improvement</strong> over flat DRL. Validated on 10 NHTSA pre-crash scenarios in CARLA with 5 formally verified LTL safety specifications across 18,477 clauses.
+                </p>
+                <ul class="exp-tags">
+                  <li>Python</li><li>PyTorch</li><li>Keras</li><li>DDPG / PPO</li><li>CARLA</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="class-project">
+              <div class="cp-meta">
+                <span class="cp-num">03</span>
+                <span class="cp-school">IIT Kharagpur · Distributed Systems</span>
+                <span class="cp-date">Jan 2021 — May 2021</span>
+              </div>
+              <div class="cp-body">
+                <h4>Ceph-Inspired Distributed Storage System</h4>
+                <p>
+                  Architected a fault-tolerant distributed storage system with a Metadata Server (MDS) and Monitor servers, primary–backup replication across four Object Storage Devices on AWS S3. Implemented a Cassandra-inspired consistency model with passive replication, heartbeat monitoring and Dynamo's gossip protocol — <strong>99.9% data availability</strong> with sub-2-second failure detection.
+                </p>
+                <ul class="exp-tags">
+                  <li>Python</li><li>AWS</li><li>MySQL</li><li>Sockets</li><li>Distributed Systems</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="class-project">
+              <div class="cp-meta">
+                <span class="cp-num">04</span>
+                <span class="cp-school">IIT Kharagpur · Network Security</span>
+                <span class="cp-date">Aug 2020 — Dec 2020</span>
+              </div>
+              <div class="cp-body">
+                <h4>Secure File Transfer over Cloud</h4>
+                <p>
+                  Engineered a secure cloud platform implementing hybrid encryption combining <strong>Elliptic Curve Cryptography</strong> with pseudo-randomly generated symmetric keys to prevent man-in-the-middle attacks. Custom N-part file sharding with layered encryption improved security 3–4% over existing approaches.
+                </p>
+                <ul class="exp-tags">
+                  <li>PHP</li><li>Python</li><li>OpenStack</li><li>GCP</li><li>Cryptography</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-mark">© Harshit Soora, Seattle, US.</p>
+      <ul class="footer-social" aria-label="Find me elsewhere">
+        <li><a href="https://www.linkedin.com/in/harshit-soora/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/harshit-soora" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://leetcode.com/u/harshitsoora/" target="_blank" rel="noopener">LeetCode</a></li>
+        <li><a href="mailto:hsoora@umd.edu">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="assets/script.js"></script>
+</body>
+</html>
