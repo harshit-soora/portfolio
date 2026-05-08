@@ -26,6 +26,10 @@ python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
 
+## Deployed
+**GitHub Pages** [(push to a repo, enable Pages)](https://harshit-soora.github.io/portfolio/)
+No build step required.
+
 ## Tweaking the look
 The `:root` block at the top of `assets/style.css` has every colour and type-scale variable:
 
@@ -35,9 +39,3 @@ The `:root` block at the top of `assets/style.css` has every colour and type-sca
 --accent: #6e2bd9;   /* purple primary */
 --teal:   #6dc8d4;   /* cyan accents (dots, rules, NEXT badge) */
 ```
-
-## Deploying
-Drop the entire folder onto any static host:
-- **GitHub Pages** (push to a repo, enable Pages)
-
-No build step required.
